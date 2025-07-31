@@ -66,8 +66,7 @@ def save_statistics_to_file(stats_dict, df, filename='lacrosse_statistics.txt'):
     with open(filename, 'w') as f:
         f.write("NCAA DIVISION 1 WOMEN'S LACROSSE 2022-2023 SEASON ANALYSIS\n")
         f.write("=" * 60 + "\n")
-        f.write(f"Analysis Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Author: anirudh@resupplyme.com\n\n")
+
         
         f.write("DATASET OVERVIEW\n")
         f.write("-" * 20 + "\n")
