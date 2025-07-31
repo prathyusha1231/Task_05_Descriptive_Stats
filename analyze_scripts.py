@@ -4,7 +4,6 @@ NCAA Division 1 Women's Lacrosse 2022-2023 Season Data Analysis
 This script performs comprehensive statistical analysis and visualization 
 of NCAA Division 1 Women's Lacrosse team performance data.
 
-Author: anirudh@resupplyme.com
 """
 
 import pandas as pd
