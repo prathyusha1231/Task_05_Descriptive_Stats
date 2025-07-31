@@ -1,6 +1,8 @@
 NCAA DIVISION 1 WOMEN'S LACROSSE 2022-2023 SEASON ANALYSIS
 ============================================================
-Analysis Date: 2025-07-30 21:13:41
+Analysis Date: 2025-07-30 21:19:22
+Author: anirudh@resupplyme.com
+
 DATASET OVERVIEW
 --------------------
 Total number of teams: 120

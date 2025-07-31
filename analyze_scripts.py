@@ -4,6 +4,7 @@ NCAA Division 1 Women's Lacrosse 2022-2023 Season Data Analysis
 This script performs comprehensive statistical analysis and visualization 
 of NCAA Division 1 Women's Lacrosse team performance data.
 
+Author: anirudh@resupplyme.com
 """
 
 import pandas as pd
@@ -67,6 +68,7 @@ def save_statistics_to_file(stats_dict, df, filename='lacrosse_statistics.txt'):
         f.write("NCAA DIVISION 1 WOMEN'S LACROSSE 2022-2023 SEASON ANALYSIS\n")
         f.write("=" * 60 + "\n")
         f.write(f"Analysis Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Author: anirudh@resupplyme.com\n\n")
         
         f.write("DATASET OVERVIEW\n")
         f.write("-" * 20 + "\n")
@@ -226,8 +228,12 @@ def perform_advanced_analysis(df):
     """
     insights = {}
     
+    # Select only numeric columns for correlation analysis
+    numeric_cols = df.select_dtypes(include=[np.number]).columns
+    numeric_df = df[numeric_cols]
+    
     # Win percentage correlation analysis
-    win_corr = df.corr()['win_pctg'].abs().sort_values(ascending=False)
+    win_corr = numeric_df.corr()['win_pctg'].abs().sort_values(ascending=False)
     insights['win_correlations'] = win_corr
     
     # Efficiency metrics
