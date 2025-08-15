@@ -488,14 +488,14 @@ Please provide:
             evaluation["accuracy"] = accuracy
             
         elif question.validation_method == "concept_match":
-            # Check if key concept is present
+            
             if "draw_pctg" in str(question.expected_answer).lower():
                 evaluation["accuracy"] = 1.0 if "draw" in response_text else 0.0
             else:
-                evaluation["accuracy"] = 0.5  # Partial credit for attempting
+                evaluation["accuracy"] = 0.5  
                 
         elif question.validation_method == "reasoning_quality":
-            # Evaluate reasoning quality for strategic questions
+            
             quality_indicators = [
                 "correlation", "analysis", "data shows", "statistics",
                 "calculate", "compare", "trend", "pattern", "because",

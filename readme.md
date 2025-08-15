@@ -10,247 +10,333 @@
 - **Key Metrics:** win_pctg, goals_per_game, goals_allowed_per_game, shot_pctg, draw_pctg, turnovers_per_game, etc.
 - **Top Performers:** Denver (95.7% win rate), Northwestern (16.95 goals/game), Clemson (50.8% shot accuracy)
 
-### Key Data Insights
+## Executive Summary - Complete Research Findings
 
-The preliminary analysis reveals several important patterns in the dataset:
+After comprehensive evaluation across multiple weeks, this research provides the first systematic assessment of LLM capabilities in sports analytics. The study tested 15 questions of varying difficulty across multiple models (GPT-4-Turbo, GPT-4, Claude-3.5-Sonnet, Claude-3-Haiku), revealing critical insights about AI performance in data analysis tasks.
 
-![Top Teams by Win Percentage](images/top_teams_win_percentage.png)
-*Figure 1: Top 10 performing teams showing clear elite tier separation*
+### Key Discovery
+**Strategic reasoning outperforms computational accuracy** - LLMs demonstrated 63-68% accuracy on complex strategic questions while achieving only 20-50% on basic statistical calculations, challenging conventional assumptions about AI capabilities.
 
-![Win Percentage Distribution](images/win_percentage_distribution.png)
-*Figure 2: Distribution shows competitive balance with slight right skew indicating some consistently dominant teams*
+## Complete Evaluation Results (Weeks 1-4)
 
-## GPT-4 Turbo Evaluation Results (July 30, 2025)
+### Week 1-2: Initial GPT-4 Turbo Evaluation (July 30, 2025)
 
-### Overall Performance Summary
+**Overall Performance:**
 - **Model Tested:** GPT-4 Turbo
 - **Overall Accuracy:** 48.2% (7.2/15 questions)
 - **Total Token Usage:** 48,861 tokens
-- **First-Try Success Rate:** 100% (no retries needed)
-- **Reasoning Quality:** 100% (all responses showed detailed work)
+- **First-Try Success Rate:** 100%
+- **Reasoning Quality:** 100% showed detailed work
 
-### Performance by Difficulty Level
-- **Easy Questions (4 total):** 50.8% accuracy
-  - Correctly identified highest win% team (Denver)
-  - Correctly identified best shot% team (Clemson) 
-  - Failed median calculation (calculated 12.865 vs actual 11.895)
-  - Partial success on above-average teams (3.4% accuracy due to estimation)
+**Performance by Difficulty:**
+- Easy Questions: 50.8% accuracy
+- Medium Questions: 20.0% accuracy
+- Hard Questions: 40.0% accuracy
+- Complex Questions: 68.0% accuracy
 
-- **Medium Questions (3 total):** 20.0% accuracy
-  - Data access issues prevented accurate analysis
-  - Showed good reasoning but lacked complete data subsets
+### Week 3-4: Cross-LLM Comparison Results (August 14, 2025)
 
-- **Hard Questions (3 total):** 40.0% accuracy
-  - Statistical modeling understanding present but limited by data access
-  - Strong strategic reasoning for improvement recommendations
+**Models Tested:** GPT-4-Turbo, GPT-4, Claude-3.5-Sonnet, Claude-3-Haiku
 
-- **Complex Questions (5 total):** 68.0% accuracy
-  - Excellent performance on strategic analysis questions
-  - High-quality reasoning for coaching decisions
-  - Conference analysis showed methodology understanding
+#### Overall Model Performance
 
-## Research Questions for LLM Evaluation
+| Model | Avg Accuracy | Avg Reasoning | Avg Tokens | Success Rate |
+|-------|-------------|---------------|------------|--------------|
+| **GPT-4-Turbo** | 71.7% | 84.0% | 2,489 | 100% |
+| **GPT-4** | 70.0% | 88.0% | 2,167 | 100% |
+| **Claude-3.5-Sonnet** | 58.3% | 82.0% | 2,329 | 100% |
+| **Claude-3-Haiku** | 63.3% | 88.0% | 2,651 | 100% |
 
-### Easy Questions (Direct Data Retrieval)
-1. Which team has the highest **win_pctg**?
-2. Which team leads in **shot_pctg**?
-3. Which teams are above the league-average **draw_pctg**?
-4. What is the **median goals_per_game** across teams?
+#### Performance by Difficulty Level (All Models)
 
-### Medium Questions (Data Analysis & Comparison)
-5. Among teams with above-average **draw_pctg**, which allowed the fewest **goals_allowed_per_game**?
-6. Is **win_pctg** more correlated with **draw_pctg** or **shot_pctg**?
-7. Which teams have positive **(goals_per_game − goals_allowed_per_game)** but below-average **shot_pctg**?
+| Difficulty | GPT-4-Turbo | GPT-4 | Claude-3.5 | Claude-Haiku |
+|------------|-------------|--------|------------|--------------|
+| **Easy** | 50.0% | 50.0% | 50.0% | 50.0% |
+| **Medium** | 100.0% | 100.0% | 50.0% | 100.0% |
+| **Hard** | 100.0% | 100.0% | 100.0% | 100.0% |
+| **Strategic** | 63.3% | 60.0% | 56.7% | 46.7% |
 
-### Hard Questions (Statistical Modeling & Strategic Analysis)
-8. Fit a simple linear model: **win_pctg ~ draw_pctg + shot_pctg + turnovers_per_game**. Which feature has the largest standardized effect?
-9. If a team raises **draw_pctg** by 5 points, how much does the model predict **win_pctg** changes (holding others constant)?
-10. Recommend one metric to improve for a "two-more-wins" goal next season; justify with the model and team's current stats.
+#### Category-Specific Performance Leaders
 
-### Additional Complex Questions (Strategic & Contextual Analysis)
-11. **Identify the most "unlucky" team:** Which team has significantly better offensive and defensive statistics than their win percentage would suggest?
-12. **Player development priority:** For a team currently at 0.400 win percentage, should they prioritize improving their worst-performing metric or enhancing their best-performing metric? Provide data-driven reasoning.
-13. **Conference strength analysis:** Using team performance metrics, rank the conferences by competitive strength and identify which conference shows the most parity.
-14. **Resource allocation question:** A coach has limited practice time - should they spend 70% on offense, 70% on defense, or 50/50 split? Use correlation analysis and diminishing returns theory.
-15. **Playoff prediction:** Based on the statistical patterns, what minimum thresholds in 3 key metrics would a team need to achieve to have an 80% probability of making playoffs?
+- **Data Retrieval:** GPT-4-Turbo (100%)
+- **Statistical Calculation:** All models (0% - median calculation failure)
+- **Conditional Analysis:** GPT-4-Turbo, GPT-4, Claude-Haiku (100%)
+- **Correlation Analysis:** All models (100%)
+- **Statistical Modeling:** All models (100%)
+- **Improvement Strategy:** Claude-3.5-Sonnet (100%)
+- **Resource Allocation:** Claude-3-Haiku (83.3%)
 
-## Expected LLM Challenges and Validation Strategy
+## Research Questions and Results
 
-### Anticipated Difficulties
-- **Easy Questions:** Should be answered correctly with minimal prompting
-- **Medium Questions:** May require clarification of "above-average" definitions
-- **Hard Questions:** Will likely need multiple prompt iterations and statistical guidance
-- **Complex Questions:** Will test LLM's ability to synthesize multiple concepts and provide strategic insights
+### Question Performance Summary
 
-### Key Findings and Insights
+| Q# | Category | Difficulty | Best Model | Best Score |
+|----|----------|------------|------------|------------|
+| 1 | Data Retrieval | Easy | All models | 100% |
+| 3 | Statistical Calculation | Easy | All models | 0% |
+| 5 | Conditional Analysis | Medium | GPT-4-Turbo/GPT-4 | 100% |
+| 6 | Correlation Analysis | Medium | All models | 100% |
+| 8 | Statistical Modeling | Hard | All models | 100% |
+| 11 | Performance Analysis | Strategic | GPT-4-Turbo | 83.3% |
+| 12 | Improvement Strategy | Strategic | Claude-3.5-Sonnet | 100% |
+| 13 | Conference Analysis | Strategic | GPT-4-Turbo | 66.7% |
+| 14 | Resource Allocation | Strategic | Claude-3-Haiku | 83.3% |
+| 15 | Predictive Analysis | Strategic | All models | 33.3% |
 
-**Unexpected Results:**
-1. **Complex Questions Outperformed Simpler Ones:** GPT-4 Turbo scored 68% on complex strategic questions vs 50.8% on basic data retrieval
-2. **Data Access Critical:** Many failures were due to incomplete data subsets rather than reasoning limitations
-3. **Strong Methodology Understanding:** Even failed questions showed solid statistical methodology
+### Critical Failures Across All Models
 
-**LLM Strengths Observed:**
-- Excellent step-by-step reasoning and work-showing
-- Strong understanding of statistical concepts and sports strategy
-- Ability to provide practical coaching recommendations
-- Good handling of uncertainty and assumption stating
+1. **Median Calculation (Q3):** 0% accuracy across all models
+   - Models calculated 12.06 instead of 11.895
+   - Consistent sorting/indexing error
 
-**LLM Limitations Identified:**
-- Median calculation errors (computational mistakes)
-- Estimation inaccuracies for averages and thresholds
-- Difficulty accessing all necessary data columns simultaneously
-- Limited ability to perform complex multi-step calculations accurately
+2. **Predictive Thresholds (Q15):** 33.3% accuracy
+   - Difficulty with percentile calculations
+   - Inconsistent threshold identification
 
-### Visual Analysis Foundation
+## Key Research Findings
 
-The dataset reveals complex relationships between performance metrics that challenged LLM interpretation:
+### 1. Prompt Engineering Effectiveness
 
-![Goals Comparison](images/goals_comparison.png)
-*Figure 3: Offensive vs Defensive performance colored by win percentage - shows successful teams cluster in upper-left (high scoring, low goals allowed)*
+**Successful Optimizations:**
+-  Step-by-step calculation prompts improved attempt rates
+-  Providing averages upfront reduced lookup errors
+-  Correlation formula reminders enhanced statistical understanding
+-  Strategic framework prompts improved reasoning quality
 
-![Correlation Heatmap](images/correlation_heatmap.png)
-*Figure 4: Performance metrics correlation matrix - reveals which statistics are most interconnected*
+**Token Optimization Success:**
+- Reduced GPT-4 token usage from 9,213 to ~2,167 through intelligent data subsetting
+- Maintained accuracy while operating within model constraints
 
-![Shot Efficiency Analysis](images/shot_efficiency.png)
-*Figure 5: Shot volume vs accuracy relationship - demonstrates that shot quality often trumps quantity*
+### 2. Model-Specific Strengths
 
-![Defensive Analysis](images/defensive_analysis.png)
-*Figure 6: Defensive performance breakdown showing save percentage vs turnovers caused impact on goals allowed*
+**GPT-4-Turbo:**
+- Best overall accuracy (71.7%)
+- Superior at data retrieval and conditional analysis
+- Most consistent across question types
 
+**GPT-4:**
+- Highest reasoning quality (88.0%)
+- Most efficient token usage (2,167 avg)
+- Strong statistical understanding
 
-## Methodology
+**Claude-3.5-Sonnet:**
+- Best at improvement strategy questions (100%)
+- Good conceptual understanding
+- Balanced performance
 
-### Phase 1: Baseline Testing (Week 1)
-- Test all 15 questions with minimal context
-- Document initial success/failure rates
-- Identify which questions require prompt engineering
+**Claude-3-Haiku:**
+- Best at resource allocation (83.3%)
+- Highest reasoning quality (88.0%)
+- Most verbose responses (2,651 tokens)
 
-### Phase 2: Prompt Engineering (Week 2)
-- Develop optimized prompts for failed questions
-- Test different approaches (step-by-step, examples, context)
-- Document what works and what doesn't
+### 3. Unexpected Discoveries
 
-### Phase 3: Cross-LLM Comparison (Week 3)
-- Test refined prompts across different LLMs
-- Compare accuracy, reasoning quality, and explanation clarity
-- Analyze LLM-specific strengths and weaknesses
+1. **Strategic > Computational:** Complex strategic questions (63.3% avg) outperformed simple calculations (50% avg)
 
-### Phase 4: Strategic Analysis Evaluation (Week 4)
-- Focus on complex strategic questions (11-15)
-- Evaluate business/coaching relevance of LLM responses
-- Test LLM's ability to provide actionable insights
+2. **Reasoning ≠ Accuracy:** High reasoning scores (82-88%) didn't guarantee accuracy (58-72%)
 
-## Success Metrics
+3. **Universal Failures:** All models failed identically on median calculation, suggesting systematic LLM limitations
 
-### Quantitative Measures
-- **Accuracy Rate:** Percentage of correct numerical answers
-- **First-Try Success:** Questions answered correctly without prompt engineering
-- **Prompt Iterations:** Average number of attempts needed per question type
+4. **Conference Extraction:** Pattern recognition for conference names proved challenging (66.7% best)
 
-### Qualitative Measures
-- **Reasoning Quality:** Logical coherence of explanations
-- **Strategic Value:** Practical applicability of recommendations
-- **Context Understanding:** Ability to grasp lacrosse-specific concepts
+## Practical Implications
 
-## Next Steps for Research
+### When to Use LLMs in Sports Analytics
 
-### Phase 2: Prompt Engineering (Week 2)
-Based on the initial evaluation results, the following improvements are planned:
+**HIGH CONFIDENCE APPLICATIONS:**
+- Strategic planning and recommendations
+- Correlation analysis and relationship identification
+- Conceptual explanations of statistical patterns
+- Resource allocation decisions
+- Performance improvement prioritization
 
-**Data Access Optimization:**
-- Implement smarter column selection for medium-difficulty questions
-- Test different data presentation formats (JSON vs CSV)
-- Experiment with providing summary statistics alongside raw data
+**REQUIRE VERIFICATION:**
+- Basic statistical calculations (median, percentiles)
+- List generation and filtering
+- Conference/group extraction from text
+- Predictive threshold calculations
 
-**Calculation Accuracy Improvements:**
-- Test explicit calculation prompts for numerical questions
-- Provide worked examples for median and average calculations
-- Experiment with step-by-step calculation verification prompts
+**NOT RECOMMENDED:**
+- Precise numerical calculations without verification
+- Large-scale data filtering operations
+- Complex multi-step statistical procedures
 
-**Cross-LLM Comparison:**
-- Test Claude and ChatGPT on the same question set
-- Compare reasoning quality across different models
-- Analyze model-specific strengths and weaknesses
+### Coaching and Analytics Applications
 
-### Research Value and Contributions
+**Recommended Use Cases:**
+1. **Strategic Planning:** LLMs excel at synthesizing multiple metrics for strategic recommendations
+2. **Performance Analysis:** Strong capability to identify "unlucky" teams and performance anomalies
+3. **Practice Planning:** Good at correlation-based resource allocation recommendations
+4. **Improvement Prioritization:** Effective at analyzing which metrics to focus on
 
-**Academic Contributions:**
-1. **First comprehensive evaluation** of LLM capabilities on sports analytics tasks
-2. **Methodology framework** for evaluating AI on domain-specific datasets
-3. **Insight into reasoning vs computation trade-offs** in current LLMs
+**Verification Required:**
+1. Any specific numerical calculations
+2. Percentile and threshold determinations
+3. List-based team selections
+4. Conference rankings
 
-**Practical Applications:**
-- **Sports Analytics:** Understanding when LLMs can assist coaches and analysts
-- **Data Science Education:** Identifying where human verification is still critical
-- **AI Tool Development:** Informing design of AI-powered sports analysis tools
+## Methodology Assessment
 
-## Expected Outcomes and Research Value
+### Successful Approaches
 
-### Hypothesis Validation
-**Original Hypothesis vs Actual Results:**
-- Easy questions: Expected 90%, Achieved 50.8% ❌
-- Medium questions: Expected 60-80%, Achieved 20% ❌  
-- Hard questions: Expected 40-60%, Achieved 40% ✅
-- Complex questions: Expected variable, Achieved 68% ✅
+1. **Data Subsetting Strategy:**
+   - Providing only relevant columns reduced tokens by 75%
+   - Top/bottom 10 teams sufficient for strategic questions
+   - Full dataset unnecessary for most analyses
 
-**Key Insight:** Strategic reasoning capabilities exceed computational accuracy - LLMs show stronger performance on conceptual analysis than basic calculations.
+2. **Prompt Optimization Framework:**
+   - Explicit calculation instructions
+   - Pre-computed averages and thresholds
+   - Step-by-step reasoning requirements
+   - Confidence level requests
 
-### Key Patterns to Test LLM Understanding
+3. **Multi-Model Testing:**
+   - Revealed consistent failures (median calculation)
+   - Identified model-specific strengths
+   - Validated prompt effectiveness across platforms
 
-Based on the visual analysis, several critical patterns tested LLM comprehension:
+### Areas for Improvement
 
-1. **Offensive-Defensive Balance:** Successfully recognized by LLM in strategic questions
-2. **Shot Efficiency vs Volume:** Well understood in coaching recommendations  
-3. **Correlation Complexity:** Methodology understood but execution limited by data access
-4. **Defensive Strategy:** Strong strategic insights provided despite computational limitations
+1. **Calculation Verification:** Need explicit verification steps for numerical outputs
+2. **Pattern Recognition:** Conference extraction requires better regex patterns
+3. **Percentile Understanding:** Models struggle with percentile concepts
 
-### Research Contributions
-1. **LLM Capability Mapping:** Identified specific strengths in strategic analysis vs computational tasks
-2. **Prompt Engineering Insights:** Data presentation format significantly impacts performance
-3. **Domain-Specific Evaluation Framework:** Reusable methodology for sports analytics AI evaluation
-4. **Practical Applications:** Clear guidelines for when LLMs can assist vs where human expertise remains critical
-5. **Academic Foundation:** First systematic evaluation of LLM sports analytics capabilities
+## Research Contributions
 
-## Tools and Resources
+### Academic Contributions
 
-### Analysis Tools
-- **Python:** Pandas, NumPy, Scikit-learn for validation
-- **Visualization:** Matplotlib, Seaborn for exploratory analysis
-- **Statistical Validation:** R or Python for model verification
+1. **First Comprehensive LLM Sports Analytics Evaluation**
+   - Systematic testing across 4 major LLMs
+   - 15 questions spanning 5 difficulty levels
+   - Quantitative and qualitative assessment metrics
 
-### LLM Platforms
-- **Claude (Anthropic):** Primary testing platform
-- **ChatGPT (OpenAI):** Comparative analysis
-- **GitHub Copilot:** Code-generation focused testing
+2. **Methodology Framework**
+   - Reusable evaluation framework for domain-specific AI assessment
+   - Prompt optimization strategies for statistical tasks
+   - Token optimization techniques for large datasets
 
-### Documentation
-- **GitHub Repository:** Task_05_Descriptive_Stats
-- **Progress Tracking:** Qualtrics survey submissions (July 31, August 15)
-- **Communication:** Direct updates to jrstrome@syr.edu
+3. **Capability Mapping**
+   - Clear delineation of LLM strengths/weaknesses in data analysis
+   - Evidence of strategic > computational performance
+   - Identification of universal failure modes
 
-## Deliverables
+### Practical Applications
 
-1. **Code Repository:** Python scripts for data analysis and validation
-2. **Prompt Library:** Documented prompts and engineering strategies
-3. **Comparative Analysis:** LLM performance comparison across question types
-4. **Research Report:** Findings, limitations, and recommendations
-5. **Visualization Gallery:** Charts and graphs generated by LLMs vs. traditional tools
+1. **Sports Analytics Guidelines**
+   - Clear use cases for LLM integration
+   - Verification requirements for different task types
+   - Cost-benefit analysis (token usage vs accuracy)
 
-## Timeline
+2. **Coaching Tools Development**
+   - Strategic planning assistant capabilities
+   - Performance analysis automation potential
+   - Practice planning optimization tools
 
-**Week 1 (July 31 Report):**
-- Complete baseline LLM testing
-- Document initial success/failure patterns
-- Begin prompt engineering for failed questions
+3. **Educational Resources**
+   - LLM limitations in statistical education
+   - Need for computational verification
+   - Prompt engineering for sports data
 
-**Week 2-3:**
-- Intensive prompt optimization
-- Cross-LLM comparison testing
-- Validate all numerical results
+## Future Research Directions
 
-**Week 4 (August 15 Report):**
-- Final analysis and documentation
-- Repository preparation and submission
-- Research findings synthesis
+### Immediate Next Steps
 
-This comprehensive approach will provide valuable insights into current LLM capabilities for sports analytics while contributing to the broader understanding of AI applications in data-driven decision making.
+1. **Calculation Accuracy Improvement**
+   - Test chain-of-thought prompting for median calculation
+   - Implement verification loops
+   - Explore few-shot learning with worked examples
+
+2. **Model Fine-Tuning**
+   - Sports analytics specific fine-tuning
+   - Statistical calculation optimization
+   - Pattern recognition enhancement
+
+3. **Hybrid Approaches**
+   - LLM + traditional statistics pipeline
+   - Human-in-the-loop verification systems
+   - Automated accuracy checking
+
+### Long-Term Research Opportunities
+
+1. **Domain-Specific Models:** Development of sports analytics specialized LLMs
+2. **Real-Time Analysis:** Integration with live game data
+3. **Predictive Modeling:** Enhanced playoff prediction capabilities
+4. **Multi-Modal Analysis:** Combining statistical and video analysis
+
+## Technical Implementation Details
+
+### Repository Structure
+```
+Research_Task_05/
+├── Data/
+│   └── lacrosse_women_ncaa_div1_2022_2023.csv
+├── Scripts/
+│   ├── analyze_scripts.py (statistical analysis)
+│   ├── openai_script.py (Week 1-2 evaluation)
+│   └── llm_comparison_analysis.py (Week 3-4 evaluation)
+├── Results/
+│   ├── llm_evaluation_results_*.csv
+│   ├── llm_comparison_report_*.txt
+│   └── lacrosse_statistics.txt
+├── Logs/
+│   ├── llm_evaluation.log
+│   └── llm_comparison.log
+└── Documentation/
+    ├── README.md
+    └── Research_Task_05.docx
+```
+
+### Key Metrics Achieved
+
+- **Total Questions Evaluated:** 10 questions × 4 models = 40 evaluations
+- **Total Tokens Used:** ~95,000 tokens
+- **Average Response Time:** 8-15 seconds per question
+- **Success Rate:** 100% (no API failures)
+- **Cost Efficiency:** ~$2.50 total API costs
+
+## Conclusions
+
+### Major Findings
+
+1. **LLMs excel at strategic reasoning but struggle with basic calculations**
+   - 68% accuracy on complex strategic questions
+   - 0% accuracy on median calculation
+   - Consistent pattern across all models tested
+
+2. **Prompt engineering significantly improves performance**
+   - Structured prompts increased accuracy by 20-30%
+   - Token optimization reduced costs by 75%
+   - Step-by-step instructions essential for calculations
+
+3. **Model differences are minimal for sports analytics tasks**
+   - GPT-4-Turbo slightly leads (71.7% vs 58-70%)
+   - All models show similar failure patterns
+   - Cost-performance favors GPT-4 (fewer tokens)
+
+### Practical Recommendations
+
+**For Researchers:**
+- Use this framework as baseline for domain-specific LLM evaluation
+- Focus on prompt optimization before model selection
+- Implement verification layers for numerical outputs
+
+**For Practitioners:**
+- Deploy LLMs for strategic analysis and recommendations
+- Maintain human verification for calculations
+- Use multiple models for critical decisions
+
+**For Developers:**
+- Build hybrid systems combining LLMs with traditional statistics
+- Implement automatic verification pipelines
+- Focus on user interfaces that highlight confidence levels
+
+## Acknowledgments
+
+This research was conducted as part of Research Task 05 for the Syracuse University School of Information Studies. Special thanks to Dr. Strome for guidance and the NCAA for providing the dataset.
+
+## Contact
+
+For questions or collaboration opportunities:
+- **Repository:** github.com/prathyusha1231/Research_Task_05
+- **Email:** prathyushamurala@gmail.com
+
