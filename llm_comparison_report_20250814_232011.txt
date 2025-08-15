@@ -1,0 +1,626 @@
+====================================================================================================
+CROSS-LLM COMPARISON AND STRATEGIC ANALYSIS EVALUATION REPORT
+====================================================================================================
+
+Report Generated: 2025-08-14 23:20:11
+Dataset: NCAA Division 1 Women's Lacrosse 2022-2023 Season
+Total Teams: 120
+Questions Evaluated: 10
+Models Tested: gpt-4-turbo, gpt-4, claude-3-5-sonnet, claude-3-haiku
+
+====================================================================================================
+AGGREGATE PERFORMANCE SUMMARY
+====================================================================================================
+
+Model Performance Comparison:
+--------------------------------------------------------------------------------
+Model                Avg Accuracy    Avg Reasoning   Avg Tokens      Success Rate   
+--------------------------------------------------------------------------------
+gpt-4-turbo          71.7%           84.0%           2489            100.0%
+gpt-4                70.0%           88.0%           2167            100.0%
+claude-3-5-sonnet    58.3%           82.0%           2329            100.0%
+claude-3-haiku       63.3%           88.0%           2651            100.0%
+
+====================================================================================================
+PERFORMANCE BY DIFFICULTY LEVEL
+====================================================================================================
+
+
+EASY Questions:
+----------------------------------------
+  gpt-4-turbo         : 50.0% (2 questions)
+  gpt-4               : 50.0% (2 questions)
+  claude-3-5-sonnet   : 50.0% (2 questions)
+  claude-3-haiku      : 50.0% (2 questions)
+
+HARD Questions:
+----------------------------------------
+  gpt-4-turbo         : 100.0% (1 questions)
+  gpt-4               : 100.0% (1 questions)
+  claude-3-5-sonnet   : 100.0% (1 questions)
+  claude-3-haiku      : 100.0% (1 questions)
+
+MEDIUM Questions:
+----------------------------------------
+  gpt-4-turbo         : 100.0% (2 questions)
+  gpt-4               : 100.0% (2 questions)
+  claude-3-5-sonnet   : 50.0% (2 questions)
+  claude-3-haiku      : 100.0% (2 questions)
+
+STRATEGIC Questions:
+----------------------------------------
+  gpt-4-turbo         : 63.3% (5 questions)
+  gpt-4               : 60.0% (5 questions)
+  claude-3-5-sonnet   : 56.7% (5 questions)
+  claude-3-haiku      : 46.7% (5 questions)
+
+====================================================================================================
+PERFORMANCE BY CATEGORY (Strategic Analysis Focus)
+====================================================================================================
+
+
+Conditional Analysis:
+----------------------------------------
+  gpt-4-turbo         : 100.0%
+  gpt-4               : 100.0%
+  claude-3-5-sonnet   : 0.0%
+  claude-3-haiku      : 100.0%
+
+Conference Analysis:
+----------------------------------------
+  gpt-4-turbo         : 66.7%
+  gpt-4               : 50.0%
+  claude-3-5-sonnet   : 33.3%
+  claude-3-haiku      : 33.3%
+
+Correlation Analysis:
+----------------------------------------
+  gpt-4-turbo         : 100.0%
+  gpt-4               : 100.0%
+  claude-3-5-sonnet   : 100.0%
+  claude-3-haiku      : 100.0%
+
+Data Retrieval:
+----------------------------------------
+  gpt-4-turbo         : 100.0%
+  gpt-4               : 100.0%
+  claude-3-5-sonnet   : 100.0%
+  claude-3-haiku      : 100.0%
+
+Improvement Strategy:
+----------------------------------------
+  gpt-4-turbo         : 83.3%
+  gpt-4               : 83.3%
+  claude-3-5-sonnet   : 100.0%
+  claude-3-haiku      : 50.0%
+
+Performance Analysis:
+----------------------------------------
+  gpt-4-turbo         : 83.3%
+  gpt-4               : 66.7%
+  claude-3-5-sonnet   : 50.0%
+  claude-3-haiku      : 33.3%
+
+Predictive Analysis:
+----------------------------------------
+  gpt-4-turbo         : 33.3%
+  gpt-4               : 33.3%
+  claude-3-5-sonnet   : 33.3%
+  claude-3-haiku      : 33.3%
+
+Resource Allocation:
+----------------------------------------
+  gpt-4-turbo         : 50.0%
+  gpt-4               : 66.7%
+  claude-3-5-sonnet   : 66.7%
+  claude-3-haiku      : 83.3%
+
+Statistical Calculation:
+----------------------------------------
+  gpt-4-turbo         : 0.0%
+  gpt-4               : 0.0%
+  claude-3-5-sonnet   : 0.0%
+  claude-3-haiku      : 0.0%
+
+Statistical Modeling:
+----------------------------------------
+  gpt-4-turbo         : 100.0%
+  gpt-4               : 100.0%
+  claude-3-5-sonnet   : 100.0%
+  claude-3-haiku      : 100.0%
+
+====================================================================================================
+DETAILED QUESTION-BY-QUESTION RESULTS
+====================================================================================================
+
+
+Question 1 (EASY - Data Retrieval)
+--------------------------------------------------------------------------------
+Question: Which team has the highest win_pctg?
+Expected Answer: Denver (Big East)
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 1.00
+    Reasoning Quality: 1.00
+    Tokens Used: 1758
+    Response Preview: To find the team with the highest win percentage (win_pctg) from the provided dataset, follow these steps:
+
+1. **Identify the Maximum Win Percentage:**
+   - Review the list of teams and their correspo...
+
+  gpt-4:
+    Accuracy: 1.00
+    Reasoning Quality: 1.00
+    Tokens Used: 1617
+    Response Preview: 1. Answer: The team with the highest win_pctg is Denver (Big East) with a win_pctg of 0.957.
+
+2. Calculations/Reasoning:
+   To find the team with the highest win_pctg, we need to look at the 'win_pctg...
+
+  claude-3-5-sonnet:
+    Accuracy: 1.00
+    Reasoning Quality: 1.00
+    Tokens Used: 1726
+    Response Preview: Let me help find the team with the highest win_pctg.
+
+Step-by-step analysis:
+1. Looking through the win_pctg column
+2. Scanning for the highest value
+3. Found Denver (Big East) with 0.957
+4. Double-ch...
+
+  claude-3-haiku:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 1810
+    Response Preview: 1. The team with the highest win_pctg is Denver (Big East) with a win_pctg of 0.957.
+
+2. To find the team with the highest win_pctg, I scanned the "win_pctg" column and identified the maximum value, w...
+
+Question 3 (EASY - Statistical Calculation)
+--------------------------------------------------------------------------------
+Question: What is the median goals_per_game across all 120 teams?
+Expected Answer: 11.895
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 0.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2392
+    Response Preview: To find the median goals_per_game across all 120 NCAA Division 1 Women's Lacrosse teams, we will follow the calculation instructions provided:
+
+**Step 1: Extract all 120 values from the 'goals_per_gam...
+
+  gpt-4:
+    Accuracy: 0.00
+    Reasoning Quality: 0.80
+    Tokens Used: 1849
+    Response Preview: To answer this question, we need to follow the steps outlined in the calculation instructions. 
+
+1. Extract all 120 values from the 'goals_per_game' column: 
+
+This is done by reading the data provided...
+
+  claude-3-5-sonnet:
+    Accuracy: 0.00
+    Reasoning Quality: 0.80
+    Tokens Used: 1878
+    Response Preview: I'll help calculate the median goals_per_game.
+
+Step-by-step:
+
+1. Looking at the sorted values around the middle (60th and 61st positions):
+- 60th value: 12.0 (Holy Cross)
+- 61st value: 12.06 (VCU)
+
+2...
+
+  claude-3-haiku:
+    Accuracy: 0.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2377
+    Response Preview: 1. Answer:
+The median goals_per_game across all 120 teams is 12.06.
+
+2. Calculations/Reasoning:
+
+Step 1: Extracting all 120 values from the 'goals_per_game' column and sorting them in ascending order:...
+
+Question 5 (MEDIUM - Conditional Analysis)
+--------------------------------------------------------------------------------
+Question: Among teams with above-average draw_pctg, which allowed the fewest goals_allowed_per_game?
+Expected Answer: Denver (Big East)
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 1.00
+    Reasoning Quality: 1.00
+    Tokens Used: 2360
+    Response Preview: To find the team with above-average draw percentage (draw_pctg) that allowed the fewest goals per game (goals_allowed_per_game), we follow these steps:
+
+1. **Filter Teams with Above-Average Draw Perce...
+
+  gpt-4:
+    Accuracy: 1.00
+    Reasoning Quality: 1.00
+    Tokens Used: 2138
+    Response Preview: 1. ANSWER: 
+The team with above-average draw percentage that allowed the fewest goals per game is Denver (Big East) with 6.22 goals allowed per game.
+
+2. CALCULATIONS/REASONING:
+
+Step 1: Filter teams ...
+
+  claude-3-5-sonnet:
+    Accuracy: 0.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2255
+    Response Preview: Let me solve this step by step.
+
+1. First, let's identify teams with draw_pctg > 0.498:
+- Denver (0.616)
+- Northwestern (0.572)
+- Loyola Maryland (0.690)
+- James Madison (0.559)
+- Syracuse (0.555)
+- M...
+
+  claude-3-haiku:
+    Accuracy: 1.00
+    Reasoning Quality: 1.00
+    Tokens Used: 2366
+    Response Preview: 1. Answer:
+Among teams with above-average draw_pctg, the team that allowed the fewest goals_allowed_per_game is Loyola Maryland (Patriot) with 7.09 goals allowed per game.
+
+2. Step-by-step calculation...
+
+Question 6 (MEDIUM - Correlation Analysis)
+--------------------------------------------------------------------------------
+Question: Is win_pctg more correlated with draw_pctg or shot_pctg?
+Expected Answer: draw_pctg (r=0.708)
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2853
+    Response Preview: To determine whether win percentage (win_pctg) is more correlated with draw percentage (draw_pctg) or shot percentage (shot_pctg), we will calculate the Pearson correlation coefficient for each pair o...
+
+  gpt-4:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2215
+    Response Preview: To answer this question, we need to calculate the Pearson correlation coefficient between win_pctg and draw_pctg, and between win_pctg and shot_pctg. The Pearson correlation coefficient measures the l...
+
+  claude-3-5-sonnet:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2380
+    Response Preview: I'll help analyze the correlation between win_pctg and both draw_pctg and shot_pctg.
+
+Step-by-step analysis:
+
+1. Looking at the data patterns:
+- Teams with high win_pctg (like Denver at 0.957) tend to...
+
+  claude-3-haiku:
+    Accuracy: 1.00
+    Reasoning Quality: 0.60
+    Tokens Used: 2517
+    Response Preview: To determine whether win_pctg is more correlated with draw_pctg or shot_pctg, I will calculate the Pearson correlation coefficient for each relationship and compare the absolute values.
+
+Step 1: Calcu...
+
+Question 8 (HARD - Statistical Modeling)
+--------------------------------------------------------------------------------
+Question: Fit a linear model: win_pctg ~ draw_pctg + shot_pctg + turnovers_per_game. Which feature has the largest standardized effect?
+Expected Answer: draw_pctg
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 1.00
+    Reasoning Quality: 0.60
+    Tokens Used: 2573
+    Response Preview: To answer your question about which feature has the largest standardized effect on win percentage (win_pctg) in NCAA Division 1 Women's Lacrosse, we will follow these steps:
+
+### Step 1: Standardize t...
+
+  gpt-4:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2265
+    Response Preview: To answer this question, we first need to standardize the variables in the model. Standardizing a variable involves subtracting the mean of the variable from each observation, then dividing by the sta...
+
+  claude-3-5-sonnet:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2432
+    Response Preview: I'll help analyze this step by step.
+
+1) First, let's standardize the variables:
+
+For each variable X, we calculate (X - mean(X))/std(X)
+
+Means (given):
+- win_pctg mean = 0.490
+- draw_pctg mean = 0.49...
+
+  claude-3-haiku:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2227
+    Response Preview: 1. Answer:
+The feature with the largest standardized effect on win_pctg is draw_pctg.
+
+2. Step-by-step calculations:
+
+a) Standardize all variables:
+- Subtract the mean and divide by the standard devia...
+
+Question 11 (STRATEGIC - Performance Analysis)
+--------------------------------------------------------------------------------
+Question: Identify the most 'unlucky' team: Which team has significantly better offensive and defensive statistics than their win percentage would suggest?
+Expected Answer: Campbell (Big South)
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 0.83
+    Reasoning Quality: 1.00
+    Tokens Used: 2478
+    Response Preview: To identify the most 'unlucky' team in NCAA Division 1 Women's Lacrosse, we will follow the steps outlined:
+
+### Step 1: Calculate Expected Win Rate
+The expected win rate is calculated based on the fo...
+
+  gpt-4:
+    Accuracy: 0.67
+    Reasoning Quality: 1.00
+    Tokens Used: 2429
+    Response Preview: To identify the most 'unlucky' team, we need to calculate the expected win rate for each team and compare it with the actual win percentage. The team with the largest negative difference (actual < exp...
+
+  claude-3-5-sonnet:
+    Accuracy: 0.50
+    Reasoning Quality: 0.80
+    Tokens Used: 2461
+    Response Preview: I'll analyze this step by step to find the most "unlucky" team.
+
+Step 1: Let's calculate expected win rate for each team
+- Average total goals per game = 11.91 + 12.07 = 23.98
+- Expected win rate form...
+
+  claude-3-haiku:
+    Accuracy: 0.33
+    Reasoning Quality: 1.00
+    Tokens Used: 3413
+    Response Preview: To identify the most 'unlucky' team, I will follow the steps outlined in the problem:
+
+1. Calculate the expected win rate based on the formula: (goals_per_game - goals_allowed_per_game) / average_tota...
+
+Question 12 (STRATEGIC - Improvement Strategy)
+--------------------------------------------------------------------------------
+Question: For a team currently at 0.400 win percentage, should they prioritize improving their worst-performing metric or enhancing their best-performing metric? Provide data-driven reasoning.
+Expected Answer: Strategic analysis required
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 0.83
+    Reasoning Quality: 0.80
+    Tokens Used: 2558
+    Response Preview: To answer the question effectively, we need to follow the strategic analysis framework outlined. Let's consider a hypothetical team with a win percentage (win_pctg) of 0.400. We will analyze the data ...
+
+  gpt-4:
+    Accuracy: 0.83
+    Reasoning Quality: 0.80
+    Tokens Used: 2266
+    Response Preview: To answer this question, we first need to identify the team with a win percentage of 0.400. However, the sample data provided does not include a team with this exact win percentage. 
+
+Assuming we have...
+
+  claude-3-5-sonnet:
+    Accuracy: 1.00
+    Reasoning Quality: 0.80
+    Tokens Used: 2560
+    Response Preview: I'll analyze this step by step.
+
+1. First, let's identify key correlations with win_pctg:
+- goals_per_game: Strong positive correlation (visible in data - top teams average 14-16 GPG, bottom teams 7-1...
+
+  claude-3-haiku:
+    Accuracy: 0.50
+    Reasoning Quality: 1.00
+    Tokens Used: 3422
+    Response Preview: To answer this question, I will follow the strategic analysis framework outlined above.
+
+1. Calculate correlations between win_pctg and all metrics:
+
+Using the sample data provided, I will calculate t...
+
+Question 13 (STRATEGIC - Conference Analysis)
+--------------------------------------------------------------------------------
+Question: Using team performance metrics, rank the top 5 conferences by competitive strength and identify which shows the most parity.
+Expected Answer: Conference analysis required
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 0.67
+    Reasoning Quality: 0.60
+    Tokens Used: 2598
+    Response Preview: To address the question, we will follow the steps outlined to analyze the data and derive insights about the competitive strength and parity of the conferences based on the win percentages of the team...
+
+  gpt-4:
+    Accuracy: 0.50
+    Reasoning Quality: 1.00
+    Tokens Used: 2298
+    Response Preview: To answer this question, we first need to extract the conference for each team and then calculate the average win_pctg and standard deviation of win_pctg for each conference. 
+
+Unfortunately, the prov...
+
+  claude-3-5-sonnet:
+    Accuracy: 0.33
+    Reasoning Quality: 0.80
+    Tokens Used: 2445
+    Response Preview: I'll analyze this step by step, though note that we're working with a partial dataset (only 20 of 120 teams).
+
+Step 1: Conference Identification from Sample
+- ACC: Boston College, Syracuse
+- AAC: Jame...
+
+  claude-3-haiku:
+    Accuracy: 0.33
+    Reasoning Quality: 1.00
+    Tokens Used: 3001
+    Response Preview: To rank the top 5 conferences by competitive strength and identify the one with the most parity, I will follow the steps outlined:
+
+1. Extract the conference from the parentheses for each team.
+2. Cal...
+
+Question 14 (STRATEGIC - Resource Allocation)
+--------------------------------------------------------------------------------
+Question: A coach has limited practice time - should they spend 70% on offense, 70% on defense, or 50/50 split? Use correlation analysis and diminishing returns theory.
+Expected Answer: Correlation-based recommendation
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 0.50
+    Reasoning Quality: 0.80
+    Tokens Used: 2788
+    Response Preview: To answer the coach's question about practice allocation, we'll first calculate the correlation coefficients between the specified offensive and defensive metrics with the win percentage (win_pctg). T...
+
+  gpt-4:
+    Accuracy: 0.67
+    Reasoning Quality: 0.80
+    Tokens Used: 2323
+    Response Preview: To answer this question, we first need to calculate the correlation between the offensive and defensive metrics with the win percentage. Correlation measures the strength and direction of a linear rel...
+
+  claude-3-5-sonnet:
+    Accuracy: 0.67
+    Reasoning Quality: 0.80
+    Tokens Used: 2578
+    Response Preview: I'll help analyze this step by step.
+
+1. OFFENSIVE CORRELATIONS WITH WIN_PCTG:
+- goals_per_game: Strong positive (looking at Denver, Northwestern with 11.91, 16.95 goals and 0.957, 0.955 win_pctg)
+- s...
+
+  claude-3-haiku:
+    Accuracy: 0.83
+    Reasoning Quality: 0.80
+    Tokens Used: 2627
+    Response Preview: To determine the optimal practice time allocation for the coach, I will perform the following analysis:
+
+1. Calculate the correlation between offensive metrics and win_pctg.
+2. Calculate the correlati...
+
+Question 15 (STRATEGIC - Predictive Analysis)
+--------------------------------------------------------------------------------
+Question: Based on statistical patterns, what minimum thresholds in 3 key metrics would a team need to achieve to have an 80% probability of making playoffs?
+Expected Answer: Top 20% performance thresholds
+
+Model Responses:
+
+  gpt-4-turbo:
+    Accuracy: 0.33
+    Reasoning Quality: 1.00
+    Tokens Used: 2539
+    Response Preview: To answer your question about the minimum thresholds in key metrics for a team to have an 80% probability of making the playoffs in NCAA Division 1 Women's Lacrosse, we will follow the steps outlined ...
+
+  gpt-4:
+    Accuracy: 0.33
+    Reasoning Quality: 0.80
+    Tokens Used: 2271
+    Response Preview: To answer this question, we need to perform a series of calculations to find the 80th percentile of win_pctg, and then the 20th percentile of goals_per_game and shot_pctg, and the 80th percentile of g...
+
+  claude-3-5-sonnet:
+    Accuracy: 0.33
+    Reasoning Quality: 0.80
+    Tokens Used: 2576
+    Response Preview: I'll help analyze this step by step.
+
+1. First, let's find the 80th percentile win_pctg (playoff cutoff):
+From the data sample, we can see teams like Richmond and Florida at 0.810 win_pctg are among t...
+
+  claude-3-haiku:
+    Accuracy: 0.33
+    Reasoning Quality: 1.00
+    Tokens Used: 2754
+    Response Preview: To determine the minimum thresholds for the 3 key metrics to have an 80% probability of making the playoffs, I will follow the steps outlined in the problem:
+
+1. Assume the top 20% of teams (24 teams)...
+
+====================================================================================================
+WEEK 4: STRATEGIC ANALYSIS INSIGHTS
+====================================================================================================
+
+Strategic Question Performance Summary:
+--------------------------------------------------------------------------------
+
+Q11: Performance Analysis
+Question: Identify the most 'unlucky' team: Which team has significantly better offensive and defensive statis...
+Best Performing Model: gpt-4-turbo (Score: 0.83)
+
+Q12: Improvement Strategy
+Question: For a team currently at 0.400 win percentage, should they prioritize improving their worst-performin...
+Best Performing Model: claude-3-5-sonnet (Score: 1.00)
+
+Q13: Conference Analysis
+Question: Using team performance metrics, rank the top 5 conferences by competitive strength and identify whic...
+Best Performing Model: gpt-4-turbo (Score: 0.67)
+
+Q14: Resource Allocation
+Question: A coach has limited practice time - should they spend 70% on offense, 70% on defense, or 50/50 split...
+Best Performing Model: claude-3-haiku (Score: 0.83)
+
+Q15: Predictive Analysis
+Question: Based on statistical patterns, what minimum thresholds in 3 key metrics would a team need to achieve...
+Best Performing Model: gpt-4-turbo (Score: 0.33)
+
+
+====================================================================================================
+KEY FINDINGS AND RECOMMENDATIONS
+====================================================================================================
+
+1. MODEL STRENGTHS:
+----------------------------------------
+  Data Retrieval: gpt-4-turbo (100.0%)
+  Conditional Analysis: gpt-4-turbo (100.0%)
+  Correlation Analysis: gpt-4-turbo (100.0%)
+  Statistical Modeling: gpt-4-turbo (100.0%)
+  Performance Analysis: gpt-4-turbo (83.3%)
+  Improvement Strategy: claude-3-5-sonnet (100.0%)
+  Conference Analysis: gpt-4-turbo (66.7%)
+  Resource Allocation: claude-3-haiku (83.3%)
+  Predictive Analysis: gpt-4-turbo (33.3%)
+
+2. PROMPT OPTIMIZATION EFFECTIVENESS:
+----------------------------------------
+  - Step-by-step calculation prompts improved numerical accuracy
+  - Providing averages upfront reduced computational errors
+  - Correlation formula reminders enhanced statistical analysis
+  - Strategic framework prompts improved reasoning quality
+
+3. AREAS FOR IMPROVEMENT:
+----------------------------------------
+  - Median calculations still challenging for some models
+  - Conference extraction requires better pattern recognition
+  - Standardized regression concepts need clearer explanation
+
+4. STRATEGIC ANALYSIS CAPABILITIES:
+----------------------------------------
+  - Models show strong conceptual understanding of sports strategy
+  - Correlation-based recommendations generally sound
+  - Resource allocation analysis demonstrates practical insights
+  - Predictive threshold calculations need verification
+
+====================================================================================================
+END OF REPORT
+====================================================================================================

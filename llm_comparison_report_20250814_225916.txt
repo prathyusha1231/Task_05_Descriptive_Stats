@@ -1,0 +1,18 @@
+====================================================================================================
+CROSS-LLM COMPARISON AND STRATEGIC ANALYSIS EVALUATION REPORT
+====================================================================================================
+
+Report Generated: 2025-08-14 22:59:16
+Dataset: NCAA Division 1 Women's Lacrosse 2022-2023 Season
+Total Teams: 120
+Questions Evaluated: 10
+Models Tested: gpt-4-turbo, gpt-4, claude-3-5-sonnet, claude-3-haiku
+
+====================================================================================================
+AGGREGATE PERFORMANCE SUMMARY
+====================================================================================================
+
+Model Performance Comparison:
+--------------------------------------------------------------------------------
+Model                Avg Accuracy    Avg Reasoning   Avg Tokens      Success Rate   
+--------------------------------------------------------------------------------
